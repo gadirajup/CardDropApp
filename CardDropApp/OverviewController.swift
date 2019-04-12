@@ -31,6 +31,7 @@ class OverviewController: UICollectionViewController {
     }
 }
 
+// CollectionView DataSource
 extension OverviewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -50,5 +51,25 @@ extension OverviewController {
         cell.label.text = category.categoryName
         
         return cell
+    }
+    
+}
+
+// CollectionView Delegate
+extension OverviewController {
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        cell.layer.cornerRadius = 14
+    }
+}
+
+// CollectionView Flow layout
+extension OverviewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .init(top: 20, left: 20, bottom: 20, right: 20)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (view.frame.width - 60) / 2
+        return .init(width: width, height: width*1.5)
     }
 }
