@@ -25,6 +25,8 @@
 		A4BFC68322601A8C00E98BA1 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4BFC67A2260190900E98BA1 /* Montserrat-SemiBold.ttf */; };
 		A4BFC68422601A8E00E98BA1 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4BFC6792260190900E98BA1 /* Montserrat-Regular.ttf */; };
 		A4BFC68622601CD000E98BA1 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFC68522601CD000E98BA1 /* CategoryCollectionViewCell.swift */; };
+		A4BFC6882260225700E98BA1 /* ImageSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFC6872260225700E98BA1 /* ImageSelectionViewController.swift */; };
+		A4BFC68A2260267D00E98BA1 /* ScaleTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFC6892260267D00E98BA1 /* ScaleTransitionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		A4BFC67C2260190A00E98BA1 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		A4BFC67D2260190A00E98BA1 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		A4BFC68522601CD000E98BA1 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A4BFC6872260225700E98BA1 /* ImageSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionViewController.swift; sourceTree = "<group>"; };
+		A4BFC6892260267D00E98BA1 /* ScaleTransitionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleTransitionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +88,10 @@
 				52A0E2D5212C6212001079CA /* Model */,
 				52A0E2BF212C61B7001079CA /* AppDelegate.swift */,
 				A4BFC677226017C600E98BA1 /* OverviewController.swift */,
+				A4BFC6872260225700E98BA1 /* ImageSelectionViewController.swift */,
 				A4BFC68522601CD000E98BA1 /* CategoryCollectionViewCell.swift */,
 				52A0E2C3212C61B7001079CA /* Main.storyboard */,
+				A4BFC6892260267D00E98BA1 /* ScaleTransitionDelegate.swift */,
 				52A0E2C6212C61B8001079CA /* Assets.xcassets */,
 				52A0E2C8212C61B8001079CA /* LaunchScreen.storyboard */,
 				52A0E2CB212C61B8001079CA /* Info.plist */,
@@ -200,8 +206,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A0E2DE212C6212001079CA /* Quote.swift in Sources */,
+				A4BFC6882260225700E98BA1 /* ImageSelectionViewController.swift in Sources */,
 				52A0E2DF212C6212001079CA /* Category.swift in Sources */,
 				52A0E2E0212C6212001079CA /* DataRequest.swift in Sources */,
+				A4BFC68A2260267D00E98BA1 /* ScaleTransitionDelegate.swift in Sources */,
 				52A0E2DD212C6212001079CA /* Image.swift in Sources */,
 				A4BFC678226017C600E98BA1 /* OverviewController.swift in Sources */,
 				A4BFC68622601CD000E98BA1 /* CategoryCollectionViewCell.swift in Sources */,

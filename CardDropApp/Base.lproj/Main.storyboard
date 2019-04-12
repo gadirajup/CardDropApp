@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -60,10 +61,46 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="CARD DROP" largeTitleDisplayMode="always" id="JnC-te-IXc"/>
+                    <connections>
+                        <segue destination="Sp0-d6-bVo" kind="show" identifier="showDetail" id="JeS-RZ-qf6"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXe-rJ-sjB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060.8695652173915" y="137.94642857142856"/>
+        </scene>
+        <!--Image Selection View Controller-->
+        <scene sceneID="eat-AB-d7B">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Sp0-d6-bVo" customClass="ImageSelectionViewController" customModule="CardDropApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nTh-0Z-Xr1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uGK-9W-alb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLM-gT-kFU">
+                                <rect key="frame" x="20" y="590" width="259" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="JES-5L-GVq"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="categoryName" destination="aLM-gT-kFU" id="asw-sr-hVK"/>
+                        <outlet property="initialImageView" destination="uGK-9W-alb" id="uhG-we-Tfo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aDl-Rp-DwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985.5072463768117" y="137.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xic-Vr-MXR">
@@ -82,10 +119,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="wCM-Iq-td5" id="ar0-HX-TV6"/>
                         <segue destination="6jy-D5-0V5" kind="relationship" relationship="rootViewController" id="Z13-lo-GNT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7f-pR-OZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="wCM-Iq-td5" customClass="ScaleTransitionDelegate" customModule="CardDropApp" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="150.72463768115944" y="137.94642857142856"/>
         </scene>
